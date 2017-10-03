@@ -1,0 +1,175 @@
+/* start certificates styles */
+
+#about {
+    
+    overflow: hidden;
+    
+    .in {
+	//max-width: 1380px;
+	padding: 55px 20px;
+	//text-align: center;
+	
+    }
+    
+    .h1 {
+	span {
+	    text-align: left;
+	}
+    }
+    
+    .text {
+	float: left;
+	width: 42%;
+	padding-top: 30px;
+	font-size: 22px;
+	line-height: 160%;
+	letter-spacing: 0.5px;
+	
+	ul {
+	    padding-bottom: 30px;
+	}
+    }
+
+
+    .certificates_wrap{
+	margin-left: 45%;
+	width: auto;
+	margin-top: -5%;
+	perspective: 1300px;
+    
+	.dg-wrapper {
+	    width: 308px;
+	    
+	    
+	    
+		a {
+		    
+		    width: auto;
+		    height: auto;
+		    
+		    img {
+			padding-top: 0;
+		    }
+		}
+		a:hover {
+		    &:after {
+			opacity: 1
+		    }
+		}
+	}
+      
+	nav {
+		width: 100%;
+		left: 0;
+		bottom: 50%;
+		margin-left: 0;
+		
+		.dg-prev, .dg-next {
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -25px;
+		    width: 53px;
+		    height: 10px;
+		    text-indent: 10000px;
+		    overflow: hidden;
+		    z-index: 5;
+		    outline: none;
+		    //background: #fff center no-repeat;
+		    cursor: pointer;
+		    border: 0;
+		    //border-radius: 25px;
+		    @include transition(background-color);
+		    
+		    &:hover {
+			    //background-color: $color_a;
+		    }
+		}
+		.dg-prev {
+		    left: 9px;
+		    background-image: url(images/arr_left2.png);
+		    &:hover {
+			    background-image:  url(images/arr_left2_hover.png);
+		    }
+		}
+		.dg-next {
+		    background-image:  url(images/arr_right2.png);
+		    right: 9px;
+		    &:hover {
+			    background-image:  url(images/arr_right2_hover.png);
+		    }
+		}
+	    }
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    #certificates {
+        
+        
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #certificates {
+        
+        
+    }
+    
+}
+@media screen and (max-width: 999px) {
+    #certificates {
+        float: none;
+        width: auto;
+        border-right: 0;
+        border-bottom: 1px solid #f4f4f4;
+    }
+    
+    #inner {
+        .certificates_wrap {
+            
+            .certificate {
+                width: 30.3%;
+                a {
+                    
+                    &:after {
+                        background-size: 60px
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    #certificates {
+        
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #sertificates {
+        
+    }
+    #inner {
+        .certificates_wrap {
+            
+            .certificate {
+                width: 44%;
+                margin: 0 3% 20px;
+                a {
+                    
+                    &:after {
+                        background-size: 60px
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+   
+}
+
+/* end certificates styles */
