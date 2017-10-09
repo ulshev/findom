@@ -103,11 +103,17 @@ h6, .h6 {
     h1, .h1 {
 	margin-bottom: 20px; 
     }
+    h2, .h2 {
+	font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 590px) {
     h1, .h1 {
 	margin-bottom: 10px; 
+    }
+    h2, .h2 {
+	font-size: 22px;
     }
 }
  
@@ -115,13 +121,10 @@ h6, .h6 {
 	color: rgba(0, 0, 0, 0.03);
 	font-size: 140px;
 	line-height: 100%;
-	margin-left: -16px;
-	margin-bottom: 35px;
 	font-weight: 700;
 	text-align: left;
 	position: relative;
-	text-transform: none;
-	padding-bottom: 0;
+	margin-bottom: 0;
 	
 	.h_bl {
 	    position: absolute;
@@ -134,6 +137,24 @@ h6, .h6 {
 	    text-align: center;
 	}
     }
+#inner .h1 {
+	font-weight: 900;
+	font-size: 132px;
+	line-height: 112px;
+	span {
+		max-width: $max-width;
+		padding: 0 20px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+#index .h1 {
+	text-transform: none;
+	margin-bottom: 35px;
+	margin-left: -16px;
+	padding: 0;
+    }
 @media screen and (max-width: 1600px) {
     .h1 {
 	font-size: 120px;
@@ -142,6 +163,10 @@ h6, .h6 {
 	    font-size: 40px;
 	    line-height: 100%;
 	}
+    }
+    #inner .h1 {
+	font-size: 107px;
+	line-height: 105px;
     }
 }
 @media screen and (max-width: 1300px) {
@@ -153,6 +178,11 @@ h6, .h6 {
 	    line-height: 100%;
 	}
     }
+    
+    #inner .h1 {
+	font-size: 82px;
+	line-height: 85px;
+    }
 }
 @media screen and (max-width: 999px) {
     .h1 {
@@ -162,6 +192,10 @@ h6, .h6 {
 	    font-size: 35px;
 	    line-height: 100%;
 	}
+    }
+    #inner .h1 {
+	font-size: 64px;
+	line-height: 70px;
     }
 }
 
@@ -173,6 +207,11 @@ h6, .h6 {
 	    font-size: 30px;
 	    line-height: 100%;
 	}
+    }
+    
+    #inner .h1 {
+	font-size: 46px;
+	line-height: 50px;
     }
 }
 @media screen and (max-width: 590px) {
@@ -187,6 +226,12 @@ h6, .h6 {
 	    //text-align: left;
 	}
     }
+    #inner .h1 {
+	font-size: 35px;
+	line-height: 35px;
+	margin-bottom: 0;
+	color: rgba(0, 0, 0, 0.03);
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -198,6 +243,10 @@ h6, .h6 {
 	    font-size: 24px;
 	    line-height: 100%;
 	}
+    }
+    #inner .h1 {
+	font-size: 25px;
+	line-height: 25px;
     }
 }
 a.button {
@@ -235,7 +284,8 @@ a.button {
 }
 a.button:hover {
 	//box-shadow: inset 0 0 3px RGBA(0, 0, 0, 0.4);
-	background-color: transparent;
+	background-color: #edc10a;
+	border: 1px solid #edc10a;
 }
 a.button:active {
 	//height: 39px;
@@ -381,6 +431,33 @@ a.button:active {
 		}
         }
 }
+
+@media screen and (max-width: 999px) {
+    .text ul {
+        li {
+                padding-left: 50px;
+		
+		&:before {
+			width: 35px;
+			top: 15px;
+		}
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .text ul {
+        li {
+                padding-left: 35px;
+		
+		&:before {
+			width: 20px;
+			top: 15px;
+		}
+        }
+    }
+}
+
 
 .fancybox-enabled {
     overflow: auto;

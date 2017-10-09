@@ -1,7 +1,6 @@
 /* start services styles */
-#services {
-    background: #fff;
-    //background-size: cover;
+#inner2 #services {
+    background: #f7f7f7;
     text-align: center;
     
     .in {
@@ -166,12 +165,193 @@
     }
     
     .button_block {
+	padding-bottom: 0px;
+	.button:after {
+	    display: none;
+	}
+    }
+}
+
+#services + .h1 {
+    background: #f7f7f7;
+}
+
+#services {
+    background: #fff;
+    //background-size: cover;
+    text-align: center;
+    
+    .in {
+	padding-bottom: 10px;
+    }
+    
+    .h1 {
+	text-align: center;
+    }
+
+    .services_wrap {
+	font-size: 0;
+	margin-bottom: 50px;
+	
+	margin-bottom: 30px;
+	.service {
+	    font-size: 16px;
+	    font-weight: 300;
+	    line-height: 145%;
+	    display: inline-block;
+	    height: 311px;
+	    width: 33.333%;
+	    margin: 0;
+	    background-color: #0b1736;
+	    border: 0;
+	    position: relative;
+	    text-align: center;
+	    overflow: hidden;
+	    
+	    &:before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		bottom: 15px;
+		right: 15px;
+		
+		z-index: 2;
+		opacity: 1;
+		@include transition(border-color);
+		border: 1px solid transparent;
+	    }
+	    
+	    a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	    }
+	    
+	    .img {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		
+		&:after {
+		    content: '';
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: rgba(0, 0, 0, 0.5);
+		    z-index: 2;
+		}
+	    }
+    
+	    .h2 {
+		font-weight: 300;
+		color: #fff;
+		position: absolute;
+		z-index: 3;
+		padding: 15px 5% 15px 30%;
+		line-height: 130%;
+		font-weight: 300;
+		font-family: $font_family_os;
+		bottom: 0;
+		top: 35%;
+		background: none;
+		height: auto;
+		text-align:  left;
+		@include transition(all);
+		width: 100%;
+		box-sizing: border-box;
+	    }
+	    
+	    span {
+		background: url(images/arr_right.png) center no-repeat;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
+		right: 20px;
+		top: 48%;
+		left: 20%;
+		width: 36px;
+		height: 36px;
+		border: 2px solid #fff;
+		border-radius: 20px;
+		text-indent: -1000px;
+		font-weight: 500;
+		overflow: hidden;
+		color: #fff;
+		text-align: center;
+		box-sizing: border-box;
+		padding: 5px;
+		text-decoration: none;
+		@include transition(all);
+		
+		&:after {
+		    display: none;
+		}
+	    }
+	    
+	}
+	.service {
+	    &:first-child {
+		.h2 {
+		    top: 42%;
+		}
+	    }
+	}
+	.service:hover {
+	    
+	    &:after {
+		opacity: 0;
+	    }
+	    &:before {
+		border-color: $color_a;
+	    }
+    
+	    .h2 {
+		top: 20%;
+		//left: 0;
+		padding-left: 5%;
+		text-align: center;
+	    }
+	    
+	    span {
+		left: 50%;
+		margin-left: -85px;
+		top:55%;
+		text-indent: 0;
+		background: $color_a;
+		width: 168px;
+		color: #03325e;
+		border-color: $color_a;
+		box-shadow: 0 7px 15px rgba(249, 201, 2, 0.3);
+		
+		&:hover {
+		    background-color: #ddb000;
+		    border-color: #ddb000;
+		}
+		&:active {
+		    //box-shadow: inset 0 0 7px rgba(0,0,0,0.3)
+		}
+	    }
+	}
+    }
+    
+    .button_block {
 	margin-bottom: 80px;
 	.button:after {
 	    display: none;
 	}
     }
 }
+
+
 
 @media screen and (max-width: 1600px) {
     #services {
@@ -188,7 +368,7 @@
 		height: 251px;
 	
 		.h2 {
-		    padding: 20px 20px 15px 80px;
+		    padding: 20px 20px 15px 90px;
 		    font-size: 20px;
 		    line-height: 130%;
 		}
@@ -200,7 +380,7 @@
 		&:hover{
 		        
 		    span {
-			left: 25%;
+			left: 50%;
 		    }
 		}
 	    }

@@ -10,10 +10,10 @@ $(document).ready(function() {
 	});
 
 	$(window).on('load resize', function(){
-	    if ( window.innerWidth > 1550 && $('#news .news_wrap').hasClass('slick-initialized') ) {
-		  $('#news .news_wrap').slick('unslick');
-		} else if ( window.innerWidth <= 1550 && !$('#news .news_wrap').hasClass('slick-initialized') ) {
-		  $('.news_wrap').slick({
+	    if ( window.innerWidth > 1550 && $('#index .news_wrap').hasClass('slick-initialized') ) {
+		  $('#index .news_wrap').slick('unslick');
+		} else if ( window.innerWidth <= 1550 && !$('#index .news_wrap').hasClass('slick-initialized') ) {
+		  $('#index .news_wrap').slick({
 		    prevArrow: '<span class="slick-prev"></span>',
 		    nextArrow: '<span class="slick-next"></span>',
 		    //fade: true,
@@ -115,7 +115,7 @@ $(document).ready(function() {
 	});
 	
 	
-	$('.reviews_wrap').slick({
+	$('#index .reviews_wrap').slick({
 	    prevArrow: '<span class="slick-prev"></span>',
             nextArrow: '<span class="slick-next"></span>',
 	    //fade: true,
@@ -137,24 +137,14 @@ $(document).ready(function() {
 	    }]
 	});
 	
-	
-	$('.working_wrap').slick({
+	$('#inner .reviews_wrap').slick({
 	    prevArrow: '<span class="slick-prev"></span>',
             nextArrow: '<span class="slick-next"></span>',
 	    //fade: true,
 	    speed: 1500,
-	    infinite: false,
-	    slidesToShow: 3,
-	    //centerMode: true,
+	    slidesToShow: 2,
 	    responsive: [{
-		breakpoint: 1100,
-		settings: { 
-		    slidesToShow: 2,
-		    adaptiveHeight: false
-		}
-	    },
-	    {
-		breakpoint: 591,
+		breakpoint: 800,
 		settings: { 
 		    slidesToShow: 1,
 		    adaptiveHeight: true
@@ -163,8 +153,39 @@ $(document).ready(function() {
 	});
 	
 	
+	$('#index .working_wrap').slick({
+	    prevArrow: '<span class="slick-prev"></span>',
+            nextArrow: '<span class="slick-next"></span>',
+	    dots: true,
+	    //fade: true,
+	    speed: 1500,
+	    //infinite: false,
+	    slidesToShow: 3,
+	    centerMode: true,
+	    responsive: [{
+		//breakpoint: 1100,
+		//settings: { 
+		//    slidesToShow: 2,
+		//    adaptiveHeight: false
+		//}
+	    },
+	    {
+		breakpoint: 601,
+		settings: { 
+		    slidesToShow: 1,
+		    adaptiveHeight: true
+		}
+	    }]
+	});
 	
 	
-	$('.certificates_wrap').gallery();
+	$(".text").mCustomScrollbar({
+	    //theme: "dark",
+	    scrollButtons:{ enable: true },
+	});
+	
+	$('#index .certificates_wrap').gallery();
+	
+	
 });
 

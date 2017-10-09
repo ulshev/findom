@@ -1,6 +1,79 @@
 /* start send_application styles */
+.servise_page .form_block {
+    
+background: url(images/servise_page_form_bg.jpg) center no-repeat;
+background-size: cover;
 
+    .form {
+	
+	border: 1px solid transparent;
+	
+    }
+}
 .form_block {
+    
+background: #eeeeee;
+    
+    .in {
+	padding: 60px 20px;
+    }
+    
+    .form {
+	background-color: rgba(243, 243, 243, 0.87);
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 20px 80px;
+	border: 1px solid $color_a;
+	
+	form {
+	    max-width: 610px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	
+	.h2 {
+	    text-align: center;
+	    font-weight: 200;
+	    text-transform: uppercase;
+	    font-size: 35px;
+	    line-height: 120%;
+	    margin-bottom: 30px;
+	}
+	
+	p {
+	    font-size: 17px;
+	    margin-bottom: 55px;
+	    text-align: center;
+	}
+	
+	input[type=text] {
+	    width: 100%;
+	    margin-left: 0;
+	    margin-right: 0;
+	    border-radius: 0;
+	    margin-bottom: 35px;
+	    display: block;
+	}
+	
+	input[type="submit"] {
+	    width: 170px;
+	    height: 41px;
+	    line-height: 39px;
+	    padding: 0;
+	    text-transform: none;
+	    margin-left: auto;
+	    margin-right: auto;
+	    display: block;
+	    box-shadow: 0 7px 15px rgba(249, 201, 2, 0.3);
+	} 
+	
+	
+    }
+    
+}
+
+#index .form_block {
     background: -moz-radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* FF3.6+ */
 background: -webkit-radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* Chrome10+,Safari5.1+ */
 background: -o-radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* Opera 11.10+ */
@@ -61,69 +134,31 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 	    border: 2px solid $color_a;
 	}
     }
-    
     .form {
 	padding: 140px 0 80px 172/1600*100%;
 	margin-left: 50%;
+	background: 0;
+	border: 0;
 	
 	p {
+	    text-transform: uppercase;
+	    text-align: left;
 	    font-weight: 700;
 	    font-size: 20px;
-	    text-transform: uppercase;
-	    margin-bottom: 55px;
 	}
 	
 	input[type=text] {
-	    width: 100%;
-	    margin-left: 0;
-	    margin-right: 0;
-	    border-radius: 0;
 	    margin-bottom: 20px;
-	    display: block;
-	}
-	input[type=checkbox] {
-	    width: auto;
-	    height: auto;
-	    margin-left: 0;
-	    border-radius: 0;
-	    margin-bottom: 15px;
-	    margin-right: -20px;
-	    opacity: 0;
 	}
 	input[type="submit"] {
-	    width: 170px;
-	    height: 41px;
-	    line-height: 39px;
-	    padding: 0;
-	    text-transform: none;
-	} 
-	
-	label {
-	    display: inline-block;
-	    position: relative;
-	    padding-left: 45px;
-	    cursor: pointer;
-	    margin-bottom: 70px;
-	    
-	    &:before {
-		position: absolute;
-		content: '';
-		width: 30px;
-		height: 30px;
-		left: 2px;;
-		top: -4px;;
-		background: #fff;
-	    }
-	}
-	input[type=checkbox]:checked + label:before {
-	    background: #fff url(images/checkbox.png) center no-repeat;
+	    margin-left: 0;
+	    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
 	} 
     }
-    
 }
 
 @media screen and (max-width: 1600px) {
-    .form_block {
+    #index .form_block {
 	
 	
 	.h2 {
@@ -145,7 +180,7 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 }
 
 @media screen and (max-width: 1300px) {
-    .form_block {
+    #index .form_block {
 	.h2 {
 	    font-size: 40px;
 	    line-height: 100%;
@@ -177,6 +212,32 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 }
 @media screen and (max-width: 999px) {
     .form_block {
+	.in {
+	    padding: 30px 20px;
+	}
+	
+	.form {
+	    padding: 30px 20px 60px;
+	    font-size: 14px;
+	    
+	    .h2 {
+		font-size: 30px;
+		line-height: 120%;
+		margin-bottom: 25px;
+	    }
+	    p {
+		margin-bottom: 15px;
+		font-size: 16px;
+		line-height: 135%;
+	    }
+	    label {
+		margin-bottom: 20px;
+		
+	    }
+	}
+    }
+    
+    #index .form_block {
 	.h2 {
 	    font-size: 30px;
 	    line-height: 100%;
@@ -191,16 +252,6 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 	
 	.form {
 	    padding: 20px 0 10px 72/1600*100%;
-	    font-size: 14px;
-	    p {
-		margin-bottom: 15px;
-		font-size: 16px;
-		line-height: 135%;
-	    }
-	    label {
-		margin-bottom: 20px;
-		
-	    }
 	    input[type=text] {
 		height: 41px;
 	    }
@@ -211,6 +262,31 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 
 @media screen and (max-width: 800px) {
     .form_block {
+	
+	.form {
+	    padding: 30px 20px 40px;
+	    
+	    .h2 {
+		font-size: 26px;
+		line-height: 120%;
+		margin-bottom: 20px;
+	    }
+	    p {
+		margin-bottom: 15px;
+		font-size: 14px;
+		line-height: 135%;
+	    }
+	    label {
+		margin-bottom: 25px;
+		line-height: 130%;
+	    }
+	    input[type=text] {
+		margin-bottom: 20px;
+	    }
+	}
+    }
+    
+    #index .form_block {
 	.h2 {
 	    font-size: 22px;
 	    line-height: 100%;
@@ -225,16 +301,6 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 	
 	.form {
 	    padding: 20px 0 20px 72/1600*100%;
-	    font-size: 14px;
-	    p {
-		margin-bottom: 15px;
-		font-size: 14px;
-		line-height: 135%;
-	    }
-	    label {
-		margin-bottom: 15px;
-		line-height: 130%;
-	    }
 	    input[type=text] {
 		height: 41px;
 	    }
@@ -243,7 +309,24 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 }
 
 @media screen and (max-width: 590px) {
-   .form_block {
+    .form_block {
+	
+	.form {
+	    
+	    .h2 {
+		font-size: 23px;
+		line-height: 120%;
+		margin-bottom: 15px;
+	    }
+	    label {
+		line-height: 130%;
+		
+		
+	    }
+	}
+    }
+    
+    #index .form_block {
 	.left {
 	    float: none;
 	    width: auto;
@@ -287,22 +370,22 @@ background: radial-gradient(40% 60%, circle cover, #a9bf1c 0%, #e3d65b 100%);/* 
 }
 
 @media screen and (max-width: 450px) {
-    #send_application {
-	.h2 {
-	    font-size: 21px;
-	    line-height: 130%;
-	    margin: 0 0 20px;
-	}
-	
-	.button {
-	    height: 43px;
-	    padding-top: 12px;
-	    
-	    &:active {
-		height: 41px;
+    .form_block {
+	.form {
+	    .h2 {
+		font-size: 21px;
+		line-height: 120%;
+		margin-bottom: 15px;
+	    }
+	    label {
+		max-width: 200px;
+		
+		&:before {
+		    top:4px;
+		}
 	    }
 	}
-    } 
+    }
 }
 
 /* end send_application styles */

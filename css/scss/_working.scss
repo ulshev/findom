@@ -37,8 +37,9 @@
 	margin-right: -10px;
 	text-align: center;
 	padding-bottom: 30px;
-	padding-right: 20px;
-	padding-left: 20px;
+	//padding-right: 20px;
+	//padding-left: 20px;
+	overflow: hidden;
 	
 	.step {
 	    //background: #f7f7f7;
@@ -50,7 +51,7 @@
 	    vertical-align: middle;
 	    color: rgba(255, 255, 255, 0.32);
 	    position: relative;
-	    @include transition(all);
+	    @include transition_slow(all);
 	    
 	    &:after {
 		content: '';
@@ -65,7 +66,7 @@
 		left: 65px;
 		border: 1px solid transparent;
 		z-index: 1;
-		@include transition(all);
+		@include transition_slow(all);
 	    }
 	    
 	    >div {
@@ -73,7 +74,7 @@
 		border: 1px solid #51aa56;
 		position: relative;
 		z-index: 2;
-		@include transition(all);
+		@include transition_slow(all);
 		
 		&:before {
 		    content: '';
@@ -103,7 +104,7 @@ background: -ms-linear-gradient(left,  #f5e06d,  #a1bd17); /* для IE10+ */
 background: linear-gradient(to right, #f5e06d, #a1bd17);
 		    z-index: 1;
 		    opacity: 0;
-		    @include transition(all);
+		    @include transition_slow(all);
 		}
 	    }
 	    
@@ -132,7 +133,7 @@ background: linear-gradient(to right, #f5e06d, #a1bd17);
 		min-height: 55px;
 	    }
 	    
-	    &:hover {
+	    &.slick-center {
 		color: rgba(255, 255, 255, 1);
 		
 		&:after {
@@ -148,30 +149,193 @@ background: linear-gradient(to right, #f5e06d, #a1bd17);
 		}
 	    }
 	}
+	
+	&.slick-slider .slick-arrow {
+	    top: auto;
+	    bottom: 70px;
+	    left: auto;
+	    right: auto;
+	}
+	
+	&.slick-slider .slick-prev {
+	    right: 50%;
+	    margin-right: 15px;
+	}
+	&.slick-slider .slick-next {
+	    left: 50%;
+	    margin-left: 15px;
+	}
+	
+	.slick-dots {
+	    height: 1px;
+	    //margin-top: 40px;
+	    background-color: rgba(196, 204, 56, 0.18);
+	    border-top: 1px solid rgba(241, 222, 103, 0.18);
+	    border-bottom: 1px solid rgba(162, 189, 23, 0.18);
+	    position: relative;
+	    margin: 90px 5px 0;
+	    
+	    li {
+		position: absolute;
+		left: 33%;
+		width: 34px;
+		height: 34px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		margin-left: 0%;
+		margin-top: -25px;
+		border-radius: 26px;
+		padding: 7px;
+		opacity: 0;
+		@include transition_slow(all);
+		
+		&:nth-child(1) {
+		    //left: 0;
+		    left: -33%;
+		    //display: none;
+		    //@include transition(all);
+		}
+		&:nth-child(2) {
+		    margin-left: 33%;
+		}
+		&:nth-child(3) {
+		    margin-left: 66%;
+		}
+		&:nth-child(4) {
+		    margin-left: 100%;
+		} 
+		    
+		    &:after {
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			top: 14px;
+			left: 15px;
+			content: '';
+			border-radius: 9px;
+			
+			background: #f5e06d; /* for non-css3 browsers */
+
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e06d', endColorstr='#a1bd17', GradientType=0); /* для IE6-9 */
+background: -webkit-linear-gradient(top, #f5e06d, #a1bd17); /* для webkit-браузеров */
+background: -moz-linear-gradient(top,  #f5e06d,  #a1bd17); /* для firefox 3.6+ */
+background: -o-linear-gradient(top,  #f5e06d,  #a1bd17); /* для Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f5e06d,  #a1bd17); /* для IE10+ */
+background: linear-gradient(to bottom, #f5e06d, #a1bd17);
+		    }
+		
+		button {
+		    height: 32px;
+		    width: 32px;
+		    border: 1px solid rgba(255, 255, 255, 0.8);
+		    border-radius: 17px;
+		    background: none;
+		    text-indent: -111000px;
+		    overflow: hidden;
+		    outline: 0 dotted transparent !important;
+		}
+		
+		
+		
+		&.slick-active {
+		    left: -25px;
+		    opacity: 1;
+		    display: block;
+		}
+		&.slick-active + li {
+		    left: -33%;
+		}
+		
+	    }
+		
+	    &:has(li.slick-active:nth-child(2)) {
+		li:nth-child(1) {
+		    left: 33%;
+		}
+	    }
+	    
+	    
+	}
     }
     
     .button_block {
 	text-align: center;
 	
-	a.button:hover {
-	color: #fff;
+    }
+}
+
+#inner #working{
+    background: none;
+    color: #000;
+    
+    .in {
+	padding-top: 0;
+    }
+    
+    .h1 {
+	text-align: right;
+	color: #fafafa;
 	
+	.h_bl {
+	    color: #000;
+	    text-align: center;
+	}
+    }
+    p {
+	text-align: center;
+	color: #000;
+	max-width: none;
+    }
+    
+    .working_wrap {
+	.step {
+	    width: 21%;
+	    margin: 20px 2%;
+	    color: #000;
+	    vertical-align: top;
+	    
 	    &:after {
-		background: url(images/arr_button.png) center no-repeat;
+		border: 1px solid #42b46b;
+	    }
+	    
+	    >div {
+		border: 1px solid #fff;
+		background: #fff;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.23);
+		
+		&:after {
+		    background: none !important;
+		}
 	    }
 	}
     }
 }
 
 @media screen and (max-width: 1600px) {
-   #news {
+    #working {
+	.working_wrap {
+	    .step {
+		margin: 20px 60px;
+	    }
+	    .slick-list {
+		padding: 0 !important;
+	    }
 	
-	
+	    .slick-dots {
+		margin: 90px 25px 0;
+	    }
+	}
     }
 }
 
 @media screen and (max-width: 1300px) {
-   
+    #working {
+	.working_wrap {
+	    
+	    .step {
+		margin: 20px 30px;
+	    }
+	}
+    }
 
 }
 @media screen and (max-width: 999px) {

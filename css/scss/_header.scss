@@ -3,7 +3,7 @@
 #header {
     //min-height: 95px;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     background: #849e1e; /* for non-css3 browsers */
 
@@ -54,12 +54,13 @@ background: linear-gradient(to right, #849e1e, #d1ac12);
 	color: #fff;
 	
 	&:after {
-	    background: url(images/arr_button.png) center no-repeat;
+	    //background: url(images/arr_button.png) center no-repeat;
+	    display: none;
 	}
 	
 	&:hover {
-            background-color: $color_a;
-	    border-color: $color_a;
+            color: $color_a;
+	    border-color: #edc10a;
         }
 	
     }
@@ -131,10 +132,28 @@ background: linear-gradient(to right, #849e1e, #d1ac12);
 #index #header {
     background: none;
     border-bottom: 1px solid rgba(255,255,255, 0.22);
+    position: absolute;
 }
 
 @media screen and (max-width: 1600px) {
-    
+    #header {
+	a.button {
+	    margin-left: 25px;
+	    margin-top: 8px;
+	}
+	#headr_cont  {
+	    margin-top: 15px;
+	}
+	nav {
+	    text-align:  center;
+	    
+	    ul.main_menu {
+		li {
+		    margin-right: 10/1634*100%;
+		}
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 1300px) and (min-width: 1000px) {
@@ -146,20 +165,22 @@ background: linear-gradient(to right, #849e1e, #d1ac12);
 	
 	a.button {
 	    margin-left: 5px;
+	    padding-left: 15px;
+	    padding-right: 15px;
 	
 	}
 	
 	#headr_cont  {
 	    font-size: 15px;
 	    line-height: 145%;
-	    margin-top: 21px;
-	    width: 120px;
-	    letter-spacing: 1px;
+	    margin-top: 19px;
+	    //width: 120px;
+	    letter-spacing: 0.7px;
 	    background-position: left 3px;
 	}
 	
 	nav {
-	    margin: 4px 30px 10px;
+	    margin: 2px 30px 10px;
 	    font-size: 12px;
 	    font-weight: 300;
 	    
@@ -359,7 +380,7 @@ background: linear-gradient(to right, #849e1e, #d1ac12);
 	
 	#headr_cont  {
 	    letter-spacing: 0px;
-	    margin-top: 10px;
+	    margin-top: 7px;
 	}
 	nav {
 	    //top: 60px;

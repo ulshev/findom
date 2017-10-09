@@ -94,6 +94,85 @@
     }
 }
 
+#inner .caption {
+    background: url(images/contacts_caption_bg.jpg) center top no-repeat;
+    margin-bottom: -15px;
+    .in {
+	text-align: center;
+	padding:  150px 20px;
+	color: #fff;
+    }
+    
+    .h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 45px;
+	line-height: 145%;
+	margin-bottom: 15px;
+    }
+    
+    p {
+	font-weight: 200;
+	text-transform: uppercase;
+	font-size: 22px;
+    }
+}
+
+#inner #contacts {
+    margin-top: -40px;
+    .in {
+	padding-top: 0;
+    }
+    
+    .text {
+	margin: 20px -20px 90px;
+	background: #f6f6f6;
+	padding: 0 20px;
+    }
+    
+    .cont {
+	display: inline-block;
+	vertical-align: top;
+	border-bottom: 0;
+	padding-top: 30px;
+	margin-bottom: 0px;
+	margin-right: 100/1560*100%;
+	padding-left: 60px;
+	background: left 53px no-repeat;
+	
+	&:last-child {
+	    margin-right: 0;
+	    margin-bottom: 30px;
+	}
+	
+	p {
+	    margin-bottom: 0;
+	}
+    }
+    
+    .fb {
+	float: right;
+	border: 3px solid #29ae81;
+	background-color: #fff;
+	padding: 30px 10/580*100%;
+	width: 620/1560*100%;
+	box-sizing: border-box;
+	
+	.button {
+	    float: right;
+	    margin-left: 20px;
+	}
+	p {
+	    margin-bottom: 0;
+	}
+    }
+    
+    .map {
+	position: relative;
+	bottom: auto;
+    }
+}
+
 
 
 @media screen and (max-width: 1600px) {

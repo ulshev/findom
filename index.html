@@ -10,15 +10,17 @@
 	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="js/jquery.gallery.js"></script>
 	<script type="text/javascript" src="js/script.js"></script> 
 	
 	<title>ФИНДОМ24</title>
 	<link rel="stylesheet" type="text/css"  media="all" href="css/jquery.fancybox.css" />
-	<link rel="stylesheet" type="text/css"media="all" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css"  media="all" href="css/jquery.mCustomScrollbar.min.css" />
 	<link rel="stylesheet" type="text/css"  media="all" href="css/font.css" />
 	
-	<link rel="stylesheet" type="text/css"  media="all" href="css/ModalWindow.css" /><!-- !!! Эти стили не подключать! Они взяты отсюда http://212.109.221.119/ -->
+	<!--link rel="stylesheet" type="text/css"  media="all" href="css/ModalWindow.css" />< !!! Эти стили не подключать! Они взяты отсюда http://212.109.221.119/ -->
 	
 	<link rel="stylesheet" type="text/css"  media="all" href="css/style_galery.css" />
 	<link rel="stylesheet" type="text/css"  media="all" href="template_styles.css" />
@@ -67,7 +69,7 @@
 		<div id="background_video">
 			<video class="bg_video" loop="loop" autoplay="autoplay" preload="auto" muted="">
 				<!--source src="http://dw-development.ru/video/Landscapes-Volume-4K-(UHD)-YouTube.webm" type="video/webm"-->
-				<source src="video/vodeo_bg_main.mp4" type="video/mp4">
+				<source src="video/video.mp4" type="video/mp4">
 				<!--p>Ваш браузер не поддерживает воспроизведение видео.</p-->
 			</video>
 		</div>
@@ -79,7 +81,7 @@
 					<li>Без поручителей</li>
 					<li>Деньги сразу</li>
 				</ul>
-				<a class="button" href="#">Перейти</a>
+				<a class="button" href="credit_property.html">Перейти</a>
 			</div>
 			<div class="slide">
 				<div class="h1"><span class="yellow">Кредит</span> под залог автомобиля</div>
@@ -88,7 +90,7 @@
 					<li>Без поручителей</li>
 					<li>Деньги сразу</li>
 				</ul>
-				<a class="button" href="#">Перейти</a>
+				<a class="button" href="credit_car.html">Перейти</a>
 			</div>
 			<div class="slide">
 				<div class="h1">Рефинансирование</div>
@@ -97,7 +99,7 @@
 					<li>Без поручителей</li>
 					<li>Деньги сразу</li>
 				</ul>
-				<a class="button" href="#">Перейти</a>
+				<a class="button" href="refinancing.html">Перейти</a>
 			</div>
 		</div>
 		
@@ -105,6 +107,7 @@
 			<form method="post">
 				<p>Хотите сделать расчет прямо сейчас?</p>
 				<input class=="text_field" type="text" value="" placeholder="Ваш телефон*">
+				<input id="agree_slide" class="text_field" type="checkbox" value=""><label for="agree_slide">согласен на обработку персональных данных</label>
 				<input class="button" type="submit" value="Отправить">
 			</form>
 		</div>
@@ -119,21 +122,21 @@
 		
 		    <div class="services_wrap">
 			<div class="service">
-			    <a href="#">
+			    <a href="refinancing.html">
 				<div class="img" style="background-image: url('images/foto1.jpg')"></div>
-				<div class="h2">Рефенансирование</div>
+				<div class="h2">Рефинансирование</div>
 				<span>Подробнее</span>
 			    </a>
 			</div>
 			<div class="service">
-			    <a href="#">
+			    <a href="credit_property.html">
 				<div class="img" style="background-image: url('images/foto2.jpg')"></div>
 				<div class="h2">Кредит под залог <br>недвижимости</div>
 				<span>Подробнее</span>
 			    </a>
 			</div>
 			<div class="service">
-			    <a href="#">
+			    <a href="credit_car.html">
 				<div class="img" style="background-image: url('images/foto3.jpg')"></div>
 				<div class="h2">Кредит под залог <br>автомобиля</div>
 				<span>Подробнее</span>
@@ -153,9 +156,9 @@
 		     <div class="form">
 			<form method="post">
 				<p>Оформите заявку на расчет проекта</p>
-				<input class=="text_field" type="text" value="" placeholder="Ваше имя*">
-				<input class=="text_field" type="text" value="" placeholder="Ваш телефон*">
-				<input id="agree" class=="text_field" type="checkbox" value=""> <label for="agree">согласен на обработку персональных данных</label><br>
+				<input class="text_field" type="text" value="" placeholder="Ваше имя*">
+				<input class="text_field" type="text" value="" placeholder="Ваш телефон*">
+				<input id="agree" class="error" type="checkbox" value=""> <label for="agree">согласен на обработку персональных данных</label><br>
 				<input class="button" type="submit" value="Отправить">
 			</form>
 		    </div>

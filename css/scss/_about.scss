@@ -29,12 +29,28 @@
 	    padding-bottom: 30px;
 	}
     }
-
-
     .certificates_wrap{
 	margin-left: 45%;
-	width: auto;
 	margin-top: -5%;
+    }
+     
+	.button_block {
+	    text-align: left;
+	    padding-left: 80px;
+	    
+	    .button {
+		&:after {
+		    display: none;
+		}
+	    }
+	    
+	}
+}
+
+    .certificates_wrap{
+	//margin-left: 45%;
+	width: auto;
+	//margin-top: -5%;
 	perspective: 1300px;
     
 	.dg-wrapper {
@@ -100,8 +116,111 @@
 		}
 	    }
     }
-}
 
+#inner #certificates {
+    background-color: #f7f7f7;
+    
+    .in {
+	padding-top: 0;
+    }
+    
+    .h1 {
+	text-align: right;
+    }
+    
+    .certificates_wrap {
+	font-size: 0;
+	padding: 50px 0;
+	.certificate {
+	    width: 14.5%;
+	    margin: 0 1% 30px;
+	    display: inline-block;
+	    vertical-align: top;
+	    position: relative;
+	    
+	    a {
+		display: block;
+		position: relative;
+		@include transition(all);
+	    }
+	    
+	    a:before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: url(images/loupe.png) center no-repeat;
+		z-index: 2;
+		content: '';
+		opacity: 0;
+		@include transition(all);
+	    }
+	    
+	    a:after {
+		display: block;
+		position: absolute;
+		content: '';
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0; 
+		@include transition(all);
+		background: #f5e06d; /* for non-css3 browsers */
+
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e06d', endColorstr='#a1bd17', GradientType=1); /* для IE6-9 */
+background: -webkit-linear-gradient(left, #f5e06d, #a1bd17); /* для webkit-браузеров */
+background: -moz-linear-gradient(left,  #f5e06d,  #a1bd17); /* для firefox 3.6+ */
+background: -o-linear-gradient(left,  #f5e06d,  #a1bd17); /* для Opera 11.10+ */
+background: -ms-linear-gradient(left,  #f5e06d,  #a1bd17); /* для IE10+ */
+background: linear-gradient(-193deg, #84c334, #29ad84);
+	    }
+	    
+	    img {
+		width: 100%;
+	    }
+	    
+	    span {
+		position: absolute;
+		color: #fff;
+		bottom: 10px;
+		left: 0;
+		font-size: 12px;
+		line-height: 135%;
+		z-index: 3;
+		box-sizing: border-box;
+		width: 100%;
+		height: 30%;
+		padding: 0 30px 10px;
+		opacity: 0;
+		@include transition(all);
+		
+		strong {
+		    text-transform: uppercase;
+		    display: block;
+		    font-weight: 700;
+		    font-size: 17px;
+		    line-height: 135%;
+		    padding-left: 5px;
+		    border-left:  3px solid #fff;
+		    margin-bottom: 5px;
+		}
+	    }
+	    
+	    a:hover {
+		transform: scale(1.1);
+		&:before, span {
+		    opacity: 1;
+		}
+		&:after {
+		    opacity: 0.73;
+		}
+	    }
+	}
+    }
+}
 
 @media screen and (max-width: 1600px) {
     #certificates {
@@ -111,13 +230,42 @@
 }
 
 @media screen and (max-width: 1300px){
-    #certificates {
-        
-        
+    #about {
+	.text {
+	    padding-top: 20px;
+	    font-size: 18px;
+	    line-height: 150%;
+	    
+	    ul {
+		padding-bottom: 0px;
+	    }
+	}
+    }
+    
+    #inner #certificates {
+	
+	.certificates_wrap {
+	    .certificate {
+		width: 19%;
+		margin: 0 3% 30px;
+	    }
+	}
     }
     
 }
 @media screen and (max-width: 999px) {
+    #about {
+	
+	.text {
+	    font-size: 16px;
+	    line-height: 150%;
+	}
+	 
+	.button_block {
+	    padding-left: 50px;
+        }
+    }
+    
     #certificates {
         float: none;
         width: auto;
@@ -125,19 +273,14 @@
         border-bottom: 1px solid #f4f4f4;
     }
     
-    #inner {
-        .certificates_wrap {
-            
-            .certificate {
-                width: 30.3%;
-                a {
-                    
-                    &:after {
-                        background-size: 60px
-                    }
-                }
-            }
-        }
+    #inner #certificates {
+	
+	.certificates_wrap {
+	    .certificate {
+		width: 23%;
+		margin: 0 1% 30px;
+	    }
+	}
     }
     
 }
@@ -145,26 +288,28 @@
     #certificates {
         
     }
+    
+    #inner #certificates {
+	
+	.certificates_wrap {
+	    .certificate {
+		width: 31%;
+	    }
+	}
+    }
 }
 
 @media screen and (max-width: 590px) {
     #sertificates {
         
     }
-    #inner {
-        .certificates_wrap {
-            
-            .certificate {
-                width: 44%;
-                margin: 0 3% 20px;
-                a {
-                    
-                    &:after {
-                        background-size: 60px
-                    }
-                }
-            }
-        }
+    #inner #certificates {
+	
+	.certificates_wrap {
+	    .certificate {
+		width: 48%;
+	    }
+	}
     }
 }
 
